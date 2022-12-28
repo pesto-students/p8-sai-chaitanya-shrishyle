@@ -13,7 +13,7 @@ The browsers high level structure includes:
 5. Data Storage - all storage mechanisms like localStorage, IndexedDB, WebSQL etc.
 6. Other structures.
 
-![diagram showing highlevel components in a browser](./images/1.jpg)
+![diagram showing highlevel components in a browser](./images/browser_components.jpg)
 
 ### The User Interface.
 
@@ -39,13 +39,13 @@ The rendering engine gets the contents of the requested document from the networ
 
 1. HTML is parsed to create the DOM (Document Object Model) Tree and CSS is parsed to create the CSSOM (Cascading Style Sheet Object Model) Tree.
 
-    Parsing is nothing but analysing and converting a program or text into an internal format that a runtime environment can actually run. In other words, it simply means translating text/code/data into a structure that can be used by code for some purpose.
+   Parsing is nothing but analysing and converting a program or text into an internal format that a runtime environment can actually run. In other words, it simply means translating text/code/data into a structure that can be used by code for some purpose.
 
-    Parsing involves Lexical Analysis and Syntax Analysis. Lexical Analysis is done by Lexers or Tokenisers which creates (upon request from the parser) tokens which are smallest elements which a parser can use.
+   Parsing involves Lexical Analysis and Syntax Analysis. Lexical Analysis is done by Lexers or Tokenisers which creates (upon request from the parser) tokens which are smallest elements which a parser can use.
 
-    The Parser receives tokens from the Lexers, conducts syntax analysis and applies the syntax rules. After application of the syntax rules, the DOM Tree is created.
+   The Parser receives tokens from the Lexers, conducts syntax analysis and applies the syntax rules. After application of the syntax rules, the DOM Tree is created.
 
-    The CSS is also parsed in a similar fashion and the CSSOM Tree is created.
+   The CSS is also parsed in a similar fashion and the CSSOM Tree is created.
 
 2. The Render Tree is created by merging the DOM Tree and the CSSOM Tree. The Render Tree is a tree of styled DOM Nodes i.e. boxes complete with their cosmetic charateristics of color, dimensions etc.
 
@@ -53,10 +53,9 @@ The rendering engine gets the contents of the requested document from the networ
 
 4. Once the render tree is created and the layout occurs, the pixels can be painted to the screen. On load, the entire screen is painted. After that, only the impacted areas are repainted.
 
+![Image showing the creation of the Render Tree by merging the DOM Tree and the CSSOM Tree](./images/rendering_process_fig1.png)
 
-![Image showing the creation of the Render Tree by merging the DOM Tree and the CSSOM Tree](./images/3.png)
-
-![Diagram showing rendering process](./images/2.png)
+![Diagram showing rendering process](./images/rendering_process_fig2.png)
 
 ### Networking:
 
@@ -75,18 +74,22 @@ The UI backend is used for dewaing basic widgets like combo boxes and windows. T
 This is a persistence layer. Browsers support storage mechanisms like localStorage, IndexedDB, WebSQL and fileSystem. It is a small database created on the local drive of the computer where the browser is installed. It manages user data such as cache, cookies, bookmarks and preferences.
 
 ## Order of Script Processing
+
 When a broser loads HTML and comes across <script>...</script> tag, it cannot continue building the DOM. It must execute (download and execute if the script has <code>src</code> attribute) the script immediately. The browser must execute the script and then it can proceed to process rest of the page.
 
 This leads to two important issues:
+
 1. Scripts cant see the DOM elements below them and they cannot add handlers etc.
 2. If the script is bulky, users cannot see the page the script is downloaded and executed.
 
 One solution is to add the scripts at the very end of the boady tag. But this solution is not perfect. THe better solution to handle this problem is to use the <code>defer</code> and <code>async</code> attributes in the script tag.
 
 ### <code>defer</code> Attribute
+
 The <code>defer</code> attribute makes the browser not to wait for the script. Instead the browser will continue to process t he HTML and build the DOM. THe script loads in the background and runs when the DOM is fully built.
 
 In other words:
+
 1. script tags with <code>defer</code> attribute will not block the page.
 2. script tags with <code>defer</code> attribute will execute when the DOM is ready (but before the <code>DOMContentLoaded</code> event).
 
@@ -95,6 +98,7 @@ This results in page content immediatly showing up.
 Deferred scripts keep their relative order, just like regular scripts.
 
 ### <code>async</code> Attribute
+
 The <code>async</code> attribute is somewhat like defer. It also makes the script non-blocking. But it has important differences in the behavior.
 
 The <code>async</code> attribute is somewhat like <code>defer</code>. It also makes the script non-blocking. But it has important differences in the behavior.
@@ -104,10 +108,8 @@ The <code>async</code> attribute means that a script is completely independent:
 1. The browser doesn’t block on <code>async</code> scripts (like defer).
 2. Other scripts don’t wait for <code>async</code> scripts, and <code>async</code> scripts don’t wait for them.
 
-
-
-
 ## References:
+
 1. [Kruno: How browsers work | JSUnconf 2017](https://www.youtube.com/watch?v=0IsQqJ7pwhw)
 2. [Learn About Parsing - What is it and Why Do You Need It?](https://www.youtube.com/watch?v=T0BO415l3N0)
 3. [Notes on “How Browsers Work”](https://codeburst.io/how-browsers-work-6350a4234634)
@@ -123,11 +125,6 @@ The <code>async</code> attribute means that a script is completely independent:
 12. [How Browsers Load and Process JavaScript](https://www.innoq.com/en/blog/loading-javascript/)
 
 13. [Dom Parser](https://www.youtube.com/watch?v=mW34Gc9c6JY)
-
-
-
-
-
 
 <style>
 body {

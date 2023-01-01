@@ -47,9 +47,11 @@ header {
   margin-top: 0.4rem;
 }
 
-main {
-  padding-right: 0.25rem;
-  padding-left: 0.25rem;
+main,
+aside,
+section.section-form {
+  padding-right: 0.45rem;
+  padding-left: 0.45rem;
 }
 
 .main-section {
@@ -57,7 +59,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #96B4C7;
+  background-color: #96b4c7;
   border-radius: 8px;
 }
 
@@ -71,7 +73,7 @@ main {
   height: 1.12rem;
   padding-bottom: 1.5rem;
   text-align: center;
-  text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.20);
+  text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.2);
 }
 
 .product-description {
@@ -81,6 +83,10 @@ main {
 .desc-img {
   margin-top: 0.5rem;
   border-radius: 8px;
+}
+
+aside {
+  margin-left: 0rem;
 }
 
 .article-card {
@@ -93,7 +99,9 @@ main {
 .article-title {
   font-size: 1rem;
   font-weight: bold;
-  text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.20);
+  text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.2);
+  border-bottom: 1px dashed #999;
+  padding-bottom: 0.5rem;
 }
 
 .article-summary {
@@ -104,20 +112,78 @@ main {
 .article-link {
   margin-top: 0.6rem;
   margin-bottom: 0.4rem;
-  text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.20);
-  border: 1px dotted #99BBD1;
-  padding: 0.50rem;
+  text-shadow: 2px 2px 2px rgba(50, 50, 50, 0.2);
+  border: 1px dotted #99bbd1;
+  padding: 0.5rem;
   border-radius: 8px;
-  background-color: #B2D5EA;
+  background-color: #b2d5ea;
 }
 
 .article-link:hover {
-  background-color: #99BBD1;
+  background-color: #99bbd1;
 }
 
-.main-section, .article-card {
+.main-section,
+.article-card,
+.section-form {
   padding: 0.6rem 0.5rem 0.4rem 0.5rem;
   box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5), 2px 1px 5px rgba(100, 100, 100, 0.25);
+}
+
+label {
+  display: block;
+  margin-top: 0.9rem;
+  margin-bottom: 0.05rem;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"] {
+  height: 2.5rem;
+  font-size: 1rem;
+  width: 80%;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #5f7989;
+  padding-left: 0.25rem;
+}
+
+fieldset {
+  border-radius: 8px;
+  margin-top: 1.25rem;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
+  border: 1px dotted #5f7989;
+}
+
+legend {
+  font-weight: 600;
+}
+
+div.terms-conditions {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+input[type="submit"]{
+  display: block;
+  height: 3.25rem;
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  background-color: #3F7EE8;
+  font-size: 1.10rem;
+  color: white;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+input[type="submit"]:hover {
+  background-color: #1565C0;
 }
 
 @media only screen and (min-width: 600px) {

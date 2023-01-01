@@ -186,6 +186,20 @@ input[type="submit"]:hover {
   background-color: #1565C0;
 }
 
+footer {
+  background-color: #222;
+  color: #c5dfef;
+  padding: 1rem;
+}
+
+.footer-subsection {
+  margin-top: 1.25rem;
+}
+
+.footer-subsec-element {
+  margin-top: 0.25rem;
+}
+
 @media only screen and (min-width: 600px) {
 }
 

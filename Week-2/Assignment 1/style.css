@@ -91,6 +91,9 @@ section.section-form {
 
 aside {
   margin-left: 0rem;
+  max-height: 60vh;
+  overflow: scroll;
+  text-overflow: ellipsis;
 }
 
 .article-card {
@@ -153,6 +156,20 @@ input[type="tel"] {
   border-right: none;
   border-bottom: 1px solid #5f7989;
   padding-left: 0.25rem;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover,
+input[type="email"]:hover,
+input[type="tel"]:hover {
+  background-color: #aac8db3b;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  background-color: #aadbc641;
 }
 
 fieldset {
@@ -277,5 +294,41 @@ footer {
 }
 
 @media only screen and (min-width: 992px) {
-  
+  .main-container {
+    max-width: 1075px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  main {
+    height: auto;
+  }
+
+  main,
+  aside {
+    width: 100%;
+  }
+
+  aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .article-card {
+    max-width: 32%;
+    margin-left: 0.35rem;
+    margin-right: 0.35rem;
+    height: 18vh;
+  }
+
+  footer {
+    position: relative;
+    top: 1600px;
+  }
 }

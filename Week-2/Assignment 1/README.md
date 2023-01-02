@@ -1,7 +1,11 @@
 # Week2 - Assignment1
 
-Screenshots of the UI are as follows:
+### Scrolling Screenshot for Small Screens (Less than 820px)
+![Scrolling Screenshot for Small Screens](./Images/small%20screens.jpg)
 
-![UI Screenshot No. 1](./Images/UI%20Screenshot%201.jpg)
-![UI Screenshot No. 2](./Images/UI%20Screenshot%202.jpg)
-![UI Screenshot No. 3](./Images/UI%20Screenshot%203.jpg)
+### Scrolling Screenshot for Medium Sized Screens (More than 820px & Less than 992px)
+![Scrolling Screenshot for Small Screens](./Images/medium%20screens.jpg)
+
+### Scrolling Screenshot for Large Screens (Larger than 992px)
+![Scrolling Screenshot for Small Screens](./Images/large%20screens.jpg)
+

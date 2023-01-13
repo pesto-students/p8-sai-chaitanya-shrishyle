@@ -1,0 +1,192 @@
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  width: 100%;
+  height: 10%;
+  background-color: #43689b;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.left-section,
+.right-section {
+  height: 100%;
+  width: 50%;
+}
+
+section.left-section {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.playlist-details {
+  margin-left: 0.5rem;
+}
+
+section.playlist-details > p {
+  color: white;
+}
+
+.major-caption {
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+.minor-caption {
+  font-size: 0.75rem;
+  margin-top: 0.6rem;
+}
+
+.playlist-icon {
+  display: inline-block;
+  width: 4rem;
+  height: 4rem;
+  background-image: url(https://uploads.codesandbox.io/uploads/user/a8233562-b36b-483d-9de9-5a1ac148fb0c/2Eq--cattyboard.jpg);
+  background-size: contain;
+}
+
+.right-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+section.player-button {
+  display: inline-block;
+  width: 20px;
+  /* border: 1px solid greenyellow; */
+  color: aliceblue;
+  margin-top: 1.2rem;
+}
+
+.container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+nav {
+  width: 2%;
+  height: 100%;
+  display: inline-block;
+  margin-top: 0;
+  padding-left: 0.9rem;
+  padding-bottom: 1.5rem;
+  background-color: #f0f0f0;
+}
+
+div.main-menu {
+  margin-top: 2rem;
+}
+
+main {
+  width: 97%;
+  height: 100%;
+  margin-top: 0;
+}
+
+header {
+  background-color: #454545;
+  width: 100%;
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.playlist-details {
+  margin-left: 2rem;
+}
+
+.playlist-details > p:nth-child(1) {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.playlist-details > p:nth-child(2) {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+  font-size: 0.5rem;
+  font-weight: 300;
+}
+
+.playlist-details > p:nth-child(3) {
+  margin-top: 0.15rem;
+  margin-bottom: 0;
+  font-size: 0.75rem;
+  font-weight: 200;
+}
+
+.playlist-icon-image {
+  /* display: inline-block; */
+  width: 7.25rem;
+  height: 7.25rem;
+  background-image: url(https://uploads.codesandbox.io/uploads/user/a8233562-b36b-483d-9de9-5a1ac148fb0c/2Eq--cattyboard.jpg);
+  background-size: contain;
+}
+
+table {
+  display: block;
+  margin-left: 1rem;
+}
+
+.sr-no {
+  width: 2%;
+  text-align: center;
+}
+
+.song-title {
+  width: 15%;
+}
+
+.artist {
+  width: 15%;
+}
+
+.time-duration {
+  width: 15%;
+}
+
+.link {
+  width: 15%;
+}
+
+td {
+  height: 2rem;
+  font-size: small;
+  font-weight: 600;
+  margin: 0;
+  border: none;
+}
+
+tr:nth-of-type(even) {
+  background-color: #f0f0f0;
+}
+
+.btn {
+  font-size: 0.75rem;
+  font-weight: 200;
+}
+
+.btn:nth-of-type(2) {
+  margin-left: 1.1rem;
+}
+
+.btn:nth-of-type(3) {
+  margin-left: 1.1rem;
+}

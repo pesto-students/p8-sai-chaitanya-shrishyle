@@ -21,7 +21,6 @@ function checkNumber(callback) {
 //Call the function and pass the random number generating number as an argument.
 checkNumber(getNumber);
 
-
 //Exercise 4.2 --------------------------------------------------------------------------------
 
 //Create a function (class) for creating other objects based on it and assign it to variable "Person".
@@ -41,4 +40,26 @@ Person.prototype.teach = function (subject) {
 //Invoke the "teach" Method on the Teacher Object with the string argument for subject name.
 Teacher.teach("Maths");
 
+
 //Exercise 4.3 --------------------------------------------------------------------------------
+
+//Create a function to implement Fibonacci numbers using iterators
+const fibonacciNumbers = (n) => ({
+  [Symbol.iterator]: () => {
+    let i = 1;
+    let old = 0;
+    let new1 = 0;
+    return {
+      next: () => {
+        if (i++ <= n) {
+          [old, new1] = [new1, old + new1 || 1];
+          return { value: old, done: false };
+        } else {
+          return { done: true };
+        }
+      },
+    };
+  },
+});
+
+console.log([...fibonacciNumbers(9)]);
